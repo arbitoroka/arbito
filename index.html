@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting to Telegram...</title>
+    <script>
+      function isWebView() {
+        const ua = navigator.userAgent || '';
+        return /TikTok|FBAN|FBAV|Instagram|WebView/i.test(ua);
+      }
+
+      function openTelegram() {
+        window.location.href = "tg://resolve?domain=arbitobetprofit";
+        setTimeout(() => {
+          window.location.href = "https://t.me/arbitobetprofit";
+        }, 2000);
+      }
+
+      window.onload = () => {
+        if (isWebView()) {
+          openTelegram();
+        } else {
+          window.location.href = "https://t.me/arbitobetprofit";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Telegram...</p>
+  </body>
+</html>
